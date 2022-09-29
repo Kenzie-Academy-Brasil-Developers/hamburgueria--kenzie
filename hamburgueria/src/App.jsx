@@ -10,6 +10,8 @@ import { CartTotal } from "./components/CartTotal";
 function App() {
   const [produtos, setProdutos] = useState([]);
   const [produtoCarrinho, setprodutoCarrinho] = useState([]);
+  const [inptSearch, setinptSearch] = useState("");
+  const [productFiltered, setProductFiltered] = useState([]);
 
   function adiciona(ele) {
     const targetButton = ele.target.id;
@@ -32,9 +34,18 @@ function App() {
 
   return (
     <div className="App">
-      <Header produtos={produtos} setProdutos={setProdutos} />
+      <Header
+        produtos={produtos}
+        productFiltered={productFiltered}
+        setinptSearch={setinptSearch}
+        setProductFiltered={setProductFiltered}
+      />
       <main>
-        <ProductsList produtos={produtos} adiciona={adiciona} />
+        <ProductsList
+          produtos={produtos}
+          adiciona={adiciona}
+          productFiltered={productFiltered}
+        />
         <aside>
           <Cart
             produtoCarrinho={produtoCarrinho}
