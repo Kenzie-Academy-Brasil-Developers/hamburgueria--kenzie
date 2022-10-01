@@ -1,4 +1,6 @@
 import { Product } from "./Product";
+import "../../styles/global"
+import "../../styles/productList.css"
 
 export const ProductsList = ({ produtos, adiciona, productFiltered }) => {
   return (
@@ -10,7 +12,7 @@ export const ProductsList = ({ produtos, adiciona, productFiltered }) => {
           ))}
         </ul>
       ) : (
-        <div>
+        <div className="productsFiltered">
           {productFiltered.map((item, i) => (
             <Product key={i} produtos={item} adiciona={adiciona} />
           ))}
