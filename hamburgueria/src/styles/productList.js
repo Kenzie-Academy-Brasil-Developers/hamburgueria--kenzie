@@ -1,15 +1,19 @@
+import styled, { createGlobalStyle } from "styled-components"
+
+export const styledList = styled.ul`
+
 ul, .productsFiltered{
     display: flex;
-    width: 100%;
-    height: 360px;
+    width: 90%;
     min-width: 400px;
+    height: 360px;
     overflow-x: scroll ;
 }
 
 li {
-    width: 30%;
+    width: 300px;
     height: 93%;
-    min-width: 240px;
+
     background: white;
     border: 2px solid var(--gray-20);
     border-radius: 5px;
@@ -17,12 +21,8 @@ li {
     margin: 10px 
 }
 
-li:hover {
-    transform: scale(1.05);
-}
-
 li figure {
-    width: 100%;
+    width: 295px;
     height: 150px;
 
     margin: auto;
@@ -32,7 +32,7 @@ li figure {
 li figure img {
     display: flex;
     width: 80%;
-    height:100%;
+    height: 100%;
 
     margin: auto ;
 }
@@ -60,7 +60,7 @@ li .preco {
     color: var(--cor-primary);
 }
 
-li > button{
+li button{
     width: 106px;
     height: 40px;
 
@@ -75,15 +75,8 @@ li > button{
     border-radius: 8px;
 }
 
-li > button:hover {
-    background-color: var(--color-primary-50);
-    border: 2px  solid var(--color-primary-50);
-
-    cursor: pointer;
-}
-
-@media (min-width: 520px) {
-    ul , .productsFiltered {
+@media (min-width:490px) {
+    ul {
         flex-direction: row;
         flex-wrap: wrap;
 
@@ -97,3 +90,5 @@ li > button:hover {
         height: 330px;
     }
 }
+
+`

@@ -1,6 +1,6 @@
 import { Product } from "./Product";
 import "../../styles/global"
-import "../../styles/productList.css"
+import "../../styles/productList"
 
 export const ProductsList = ({ produtos, adiciona, productFiltered }) => {
   return (

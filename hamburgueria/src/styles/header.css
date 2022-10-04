@@ -60,7 +60,14 @@ header div button {
   margin: auto 5px;
 }
 
-@media (min-width:490px) {
+header h3 {
+  text-align: center;
+
+  background-color: var(--color-secondary);
+  border-radius: 18px;
+}
+
+@media (min-width: 520px) {
 
   header  {
     flex-direction: row;
@@ -73,6 +80,16 @@ header div button {
 
   header div {
     margin: 0 5%
+  }
+  
+}
+
+@keyframes modal {
+  0% {
+      transform: translateY(-1000px);
+  }
+  100% {
+      transform: translateY(0px);
   }
   
 }

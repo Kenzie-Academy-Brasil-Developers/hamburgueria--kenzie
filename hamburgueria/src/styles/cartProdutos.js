@@ -1,3 +1,6 @@
+import styled from "styled-components";
+
+export const styleCartProduto = styled.div`
 .product {
     display: flex;
 
@@ -33,17 +36,10 @@
     margin: 10px 0 10px 10px;
 }
 
-.product > button {
+.product button {
     color: var(--gray-50);
     background-color:  var(--gray-0);
 
     border: none
 }
-
-.product > button:hover{
-    color: var(--gray-20);
-    background-color: var(--gray-50);
-    border: 2px solid var(--gray-50);
-
-    cursor: pointer;
-}
+`
