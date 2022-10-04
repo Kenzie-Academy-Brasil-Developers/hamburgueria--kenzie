@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import "../../styles/global";
 import "../../styles/header.css";
 
@@ -8,6 +9,7 @@ export const Header = ({
   productFiltered,
   setProductFiltered,
 }) => {
+
   const productSearch = (inpt) => {
     const inptTratado = inpt.toUpperCase();
     setInptSearch(inptTratado);
@@ -17,6 +19,7 @@ export const Header = ({
         (item) =>
           item.category.toUpperCase().includes(inptTratado) ||
           item.name.toUpperCase().includes(inptTratado)
+
       )
     );
   };
@@ -28,10 +31,10 @@ export const Header = ({
         <h2>Kenzie</h2>
       </div>
 
-      {productFiltered.length < 1 ? (
-        <p></p>
-      ) : (
+      {productFiltered.length <= 0 ? (
         <h3>Não Encontramos o produto</h3>
+        ) : (
+          <h3></h3>
       )}
 
       <div>

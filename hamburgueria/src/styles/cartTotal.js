@@ -1,3 +1,6 @@
+import styled from "styled-components";
+
+export const styleCartProduto = styled.div`
 .cartTotal {
     display: flex;
     flex-direction: row;
@@ -5,7 +8,7 @@
 
     background-color: var(--gray-0);
     
-    width: 100%;
+    width: 382px;
     height: 150px;
     margin: -20px auto;
 
@@ -35,17 +38,9 @@
     font-size: 16px;
 
     color:  var(--gray-50);
-    width: 80%;
+    width: 343px;
     height: 60px;
 
     margin: -70px auto;
-    border-radius: 8px;
 }
-
-#remove:hover {
-    color: var(--gray-20);
-    background-color: var(--gray-50);
-    border: 2px solid var(--gray-50);
-
-    cursor: pointer;
-}
+`
