@@ -18,15 +18,15 @@ function App() {
   function adiciona(element) {
     const targetButton = element.target.id;
 
-    produtos.map((item) => {
+    produtos.find((item) => {
       if (targetButton == item.id) {
         setprodutoCarrinho([...produtoCarrinho, item]);
 
-        produtoCarrinho.map((itemCarrinho, i, arr) => {
+     /*    produtoCarrinho.map((itemCarrinho, i, arr) => {
           if (item.name === itemCarrinho.name) {
             setUnidade(unidade + 1);
           }
-        });
+        }); */
       }
     });
   }
